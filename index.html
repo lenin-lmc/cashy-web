@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conoce Cashy, el proyecto peruano de finanzas personales con registro conversacional, presupuestos y metas de ahorro.">
+<meta name="theme-color" content="#f5fbfc">
+<title>Cashy | Tus finanzas, en conversación</title>
+<link rel="icon" href="assets/cashy.png"><link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="top"><div class="wrap nav">
+<a class="brand" href="#" aria-label="Cashy, inicio"><img src="assets/cashy.png" alt="" width="36" height="36">Cashy<span>.</span></a>
+<nav aria-label="Navegación principal"><a href="#pantallas">La app</a><a href="#funciones">Funciones</a><a href="#proyecto">Proyecto</a><a href="#foda">FODA</a></nav>
+<a class="button small" href="#demo">Probar demo</a>
+</div></header>
+<main id="contenido">
+<section class="hero"><div class="wrap hero-inner">
+<div class="hero-copy"><h1>Tu dinero.<br><em>En claro.</em></h1>
+<p class="lead">Registra gastos por chat y organiza tu dinero para alcanzar tus metas.</p>
+<div class="actions"><a class="button" href="#demo">Probar el chat</a><a class="button ghost" href="#pantallas">Explorar la app</a></div></div>
+<figure class="product-preview">
+<div class="scene" aria-hidden="true">
+  <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+  <div class="device-group" data-tilt>
+    <div class="tablet device"><div class="tablet-screen">
+      <div class="screen-brand"><img src="assets/cashy.png" width="24" height="24" alt=""> Cashy</div>
+      <div class="tablet-title">Resumen de este mes</div>
+      <div class="tablet-metrics"><div>Ingresos<strong>S/ 3.500</strong></div><div>Gastos<strong>S/ 980</strong></div></div>
+      <div class="tablet-graph"><span>Gastos por semana</span><div class="bars"><i></i><i></i><i></i><i></i></div><div class="bar-labels"><span>Sem. 1</span><span>Sem. 2</span><span>Sem. 3</span><span>Sem. 4</span></div></div>
+    </div></div>
+    <div class="phone device">
+      <img class="device-capture" src="assets/cashy-resumen.png" width="1080" height="2220" alt="">
+    </div>
+  </div>
+</div>
+<figcaption><a href="assets/cashy-resumen.png">Ver captura del resumen mensual</a> · Datos de demo</figcaption>
+</figure>
+</div></section>
+<section class="section light" id="pantallas" aria-labelledby="tour-heading">
+<div class="wrap tour">
+  <div class="tour-copy">
+    <h2 id="tour-heading">Cashy por dentro.</h2>
+    <p>Mira la pantalla de inicio de Cashy y explora cómo funcionan los presupuestos y las metas.</p>
+    <nav class="tour-nav" aria-label="Vistas de la aplicación">
+      <a href="#vista-panel" aria-current="true">Panel financiero</a>
+      <a href="#vista-presupuesto">Presupuestos</a>
+      <a href="#vista-metas">Metas de ahorro</a>
+    </nav>
+  </div>
+  <div class="tour-stage">
+    <div class="tour-phone device" data-preview="panel">
+      <div class="tour-screen">
+        <div class="phone-camera" aria-hidden="true"></div>
+        <div class="screen-brand"><img src="assets/cashy.png" width="26" height="26" alt=""> Cashy</div>
+        <section class="tour-view tour-view-capture" id="vista-panel" aria-label="Panel financiero">
+          <img class="tour-capture" src="assets/cashy-resumen.png" width="1080" height="2220" alt="Inicio de Cashy en modo demo. Balance de S/ 2.520 y presupuesto mensual con S/ 820 disponibles." loading="lazy">
+        </section>
+        <section class="tour-view" id="vista-presupuesto" aria-label="Presupuestos">
+          <h3>Presupuesto mensual</h3>
+          <div class="screen-meter"><label for="food">Alimentación</label><progress id="food" max="400" value="275"></progress><span>S/ 275 de S/ 400</span></div>
+          <div class="screen-meter"><label for="transport">Transporte</label><progress id="transport" max="150" value="90"></progress><span>S/ 90 de S/ 150</span></div>
+          <p>Compara lo que llevas gastado con el límite de cada categoría.</p>
+        </section>
+        <section class="tour-view" id="vista-metas" aria-label="Metas de ahorro">
+          <h3>Fondo de emergencia</h3>
+          <p class="tour-amount"><small>Ahorro acumulado</small><strong>S/ 600</strong></p>
+          <div class="screen-meter"><label for="goal">Meta de S/ 1.000</label><progress id="goal" value="600" max="1000"></progress><span>60 % completado</span></div>
+          <p>Registra tus aportes y sigue el avance hacia tu meta.</p>
+        </section>
+        <small class="tour-disclaimer">Datos de ejemplo</small>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section demo-section" id="demo"><div class="wrap demo-grid">
+<div><h2>Del mensaje<br>al registro.</h2><p>Prueba cómo Cashy interpreta un mensaje, propone categorías y te pide confirmar el registro.</p>
+<ol class="steps"><li>Elige un mensaje de ejemplo.</li><li>Revisa los conceptos y sus categorías.</li><li>Confirma y mira el gasto registrado en la demo.</li></ol></div>
+<div class="chat"><div class="chat-top"><img src="assets/cashy.png" alt="" width="42" height="42"><div><strong>Asistente Cashy</strong><span>Simulación con datos ficticios</span></div></div>
+<div class="chat-body"><p class="bubble">¿Qué gastos registramos hoy?</p>
+<label for="example">Mensaje de ejemplo</label><select id="example"><option value="daily">Gasté 18 en almuerzo, 5 en pasaje y 7 en café</option><option value="weekend">Gasté 35 en cine y 24,50 en comida</option></select>
+<button class="button" id="interpret" type="button">Revisar gastos</button>
+<div id="review" hidden><ul id="movements"></ul><button class="button" id="confirm" type="button">Confirmar gastos</button></div>
+<p class="result" id="status" role="status"></p></div></div>
+</div></section>
+<section class="section" id="funciones"><div class="wrap"><h2>Del gasto diario<br>a tu próxima meta.</h2>
+<div class="feature-grid">
+<article><span aria-hidden="true">◎</span><h3>Registro conversacional</h3><p>Escribe lo que gastaste o recibiste. Cashy propone montos y categorías para que los revises.</p></article>
+<article><span aria-hidden="true">▥</span><h3>Panel financiero</h3><p>Consulta ingresos, gastos, saldo y ahorro para ver cómo evoluciona tu dinero.</p></article>
+<article><span aria-hidden="true">◫</span><h3>Presupuestos y alertas</h3><p>Define límites por categoría y recibe avisos de excesos o vencimientos.</p></article>
+<article><span aria-hidden="true">◇</span><h3>Metas de ahorro</h3><p>Fija un monto y una fecha, registra tus aportes y sigue tu progreso.</p></article>
+<article><span aria-hidden="true">☷</span><h3>Historial editable</h3><p>Busca movimientos, filtra por categoría y corrige registros cuando lo necesites.</p></article>
+<article><span aria-hidden="true">◷</span><h3>Calendario financiero</h3><p>Reúne fechas de servicios, cuotas y suscripciones para anticipar tus próximos pagos.</p></article>
+</div></div></section>
+<section class="section light" id="proyecto"><div class="wrap">
+<div class="intro"><div><h2>Diseñado para<br>empezar en Perú.</h2></div><p>Cashy es una propuesta de aplicación móvil para Android y iOS, pensada para estudiantes, jóvenes trabajadores, profesionales e independientes que quieren ordenar sus finanzas cotidianas.</p></div>
+<div class="purpose"><article><h3>Misión</h3><p>Ayudar a las personas a entender en qué gastan, cuánto pueden gastar y ahorrar, y qué decisiones les acercan a sus metas.</p></article><article><h3>Visión</h3><p>Convertirse en una plataforma latinoamericana de finanzas personales centrada en la simplicidad, la automatización, la educación financiera y la privacidad.</p></article></div>
+</div></section>
+<section class="section" id="foda"><div class="wrap"><h2>Análisis FODA</h2>
+<div class="swot">
+<article><span aria-hidden="true">F</span><div><h3>Fortalezas</h3><ul><li>Registro conversacional y automatización.</li><li>Alertas personalizadas.</li><li>Metas y ahorro dentro de la app.</li></ul></div></article>
+<article><span aria-hidden="true">O</span><div><h3>Oportunidades</h3><ul><li>Crecimiento de los pagos digitales.</li><li>Educación financiera móvil y expansión regional.</li><li>Alianzas empresariales y educativas.</li></ul></div></article>
+<article><span aria-hidden="true">D</span><div><h3>Debilidades</h3><ul><li>Marca nueva y costos de IA y nube.</li><li>Necesidad de datos para personalizar.</li><li>Dependencia de las tiendas móviles.</li></ul></div></article>
+<article><span aria-hidden="true">A</span><div><h3>Amenazas</h3><ul><li>Competidores establecidos.</li><li>Incidentes de seguridad y cambios regulatorios.</li><li>Baja retención si falla la incorporación inicial.</li></ul></div></article>
+</div></div></section>
+<section class="section light" id="modelo"><div class="wrap"><h2>Una entrada gratuita.<br>Más herramientas con Premium.</h2>
+<div class="purpose"><article><h3>Gratis</h3><p>Registro de movimientos, panel básico, categorías, alertas básicas y metas limitadas.</p></article><article><h3>Premium</h3><p>Asistente avanzado, presupuestos dinámicos, predicciones, más metas, informes y personalización.</p></article></div>
+<p class="note">Modelo propuesto, sujeto a validación con usuarios durante la beta.</p></div></section>
+<section class="section roadmap" id="ruta"><div class="wrap">
+<h2>Cómo evolucionará Cashy.</h2>
+<ol class="phase-grid">
+<li><h3>Prototipo</h3><p>Probar con usuarios el registro por chat y la lectura del panel financiero.</p></li>
+<li><h3>Primera versión y beta</h3><p>Validar el chat, los presupuestos, las alertas y las metas de ahorro con un grupo de prueba.</p></li>
+<li><h3>Funciones futuras</h3><p>Explorar el detector de gastos hormiga, el modo familia y la importación de movimientos.</p></li>
+</ol></div></section>
+<section class="section closing"><div class="wrap"><h2>Privacidad<br>desde el diseño.</h2><p>El flujo propuesto te permite revisar la interpretación del asistente antes de guardar un movimiento. El plan contempla minimizar los datos recopilados, proteger el acceso y permitir que el usuario exporte o elimine su información.</p><a class="button" href="#demo">Volver a la demo</a></div></section>
+<section class="section download-section" id="descarga" aria-labelledby="download-heading">
+  <div class="wrap download-layout">
+    <div>
+      <h2 id="download-heading">Descarga Cashy.</h2>
+      <p>Conoce el estado de la descarga y prueba el registro por chat en esta web.</p>
+    </div>
+    <div class="download-access">
+      <img src="assets/cashy.png" alt="" width="56" height="56" loading="lazy">
+      <div><h3>Cashy para Android</h3><p>Descarga pendiente. El enlace oficial estará aquí cuando se confirme la disponibilidad.</p></div>
+      <a class="button" href="#demo">Probar demo web</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="wrap footer"><a class="brand" href="#"><img src="assets/cashy.png" alt="" width="36" height="36">Cashy<span>.</span></a><nav aria-label="Navegación del pie de página"><a href="#modelo">Modelo de negocio</a><a href="#ruta">Hoja de ruta</a><a href="#descarga">Descarga</a></nav></footer>
+</body></html>
